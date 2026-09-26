@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>бот&lt;3</title>
+    <meta name="description" content="бот коноло подслушано кременчуг&lt;3">
+    <meta name="keywords" content="подслушано кременчуг, подслушано кременчуга, подслушка кременчуг, подслушка кременчуга, сущность кременчуг, сущность кременчуга">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=width-device, initial-scale=1.0">
+
+    <style>
+        :root {
+            --primary-bg: #814c9c;
+            --secondary-bg: #040719;
+            --accent-color: #040719;
+            --text-color: #ee0505;
+            --telegram-blue: #1afbff;
+            --hover-color: #040719;
+            --button-shadow: 0 8px 24px #040719;
+            --logo-size: 400px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        
+        html, body {
+            min-height: 100vh;
+            width: 100%;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+        }
+        
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(var(--accent-color) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.03;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .container {
+            max-width: 480px;
+            width: 90%;
+            padding: 30px;
+            background-color: var(--secondary-bg);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            border: 2px solid var(--accent-color);
+            z-index: 1;
+        }
+        
+        .logo {
+            width: var(--logo-size);
+            height: var(--logo-size);
+            margin: 0 auto 8px;
+            position: relative;
+            animation: glowPulse 3s infinite alternate ease-in-out;
+            max-width: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        @keyframes glowPulse {
+            0% { filter: drop-shadow(0 0 5px rgba(227, 208, 181, 0.2)); }
+            100% { filter: drop-shadow(0 0 15px rgba(227, 208, 181, 0.5)); }
+        }
+        
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            pointer-events: none;
+        }
+        
+        .logo::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 2;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, var(--accent-color) 0%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        p {
+            font-size: 1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background-color: var(--telegram-blue);
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-top: 10px;
+            box-shadow: var(--button-shadow);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 12px 30px #040719;
+        }
+        
+        .cta-button:active {
+            transform: translateY(0) scale(0.98);
+        }
+        
+        .telegram-icon {
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .telegram-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+        
+        .related-tool {
+            margin: 20px auto 0;
+            padding: 14px 16px 0;
+            max-width: 420px;
+            border-top: 1px solid rgba(227, 208, 181, 0.12);
+        }
+        
+        .related-tool p {
+            max-width: 410px;
+            margin: 0 auto 7px;
+            font-size: 0.78rem;
+            line-height: 1.45;
+            color: rgba(255, 255, 255, 0.62);
+            opacity: 1;
+        }
+        
+        .related-tool a {
+            color: var(--accent-color);
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(227, 208, 181, 0.35);
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+        
+        .related-tool a:hover {
+            color: var(--hover-color);
+            border-bottom-color: var(--hover-color);
+        }
+        
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Медиа-запросы */
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px 20px;
+                width: 92%;
+            }
+            h1 { font-size: 2.2rem; }
+            :root { --logo-size: 160px; }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 15px;
+                border-width: 1px;
+            }
+            h1 { font-size: 1.8rem; }
+            :root { --logo-size: 130px; }
+            .cta-button { padding: 14px 28px; font-size: 1.1rem; }
+            p { font-size: 0.9rem; margin-bottom: 20px; }
+            .related-tool { margin-top: 12px; padding: 12px 8px 0; }
+            .related-tool p { font-size: 0.72rem; }
+        }
+        
+        @media (max-width: 360px) {
+            .container { padding: 15px 12px; }
+            :root { --logo-size: 110px; }
+            h1 { font-size: 1.6rem; }
+            .tagline { font-size: 1rem; }
+            p { font-size: 0.85rem; margin-bottom: 15px; }
+            .cta-button { padding: 12px 20px; font-size: 1rem; }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('contextmenu', function(e) {
+                if (e.target.closest('.logo')) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            const images = document.querySelectorAll('.logo img');
+            images.forEach(img => {
+                img.addEventListener('dragstart', function(e) {
+                    e.preventDefault();
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="" width="250" height="250">
+            </div>
+        </header>
+        
+        <main>    
+            <section class="cta-section">
+                <a id="botLink" href="https://t.me/podslushka_robot" class="cta-button">
+                    <span class="telegram-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.98 7.5l-1.87 8.82c-.14.66-.5.82-1.02.51l-2.82-2.08-1.36 1.31c-.15.15-.28.28-.57.28l.2-2.88 5.24-4.74c.23-.2-.05-.32-.35-.12l-6.47 4.07-2.79-.87c-.6-.19-.61-.6.13-.9l10.88-4.19c.5-.18.94.11.8.79z"/>
+                        </svg>
+                    </span>
+                    перейти к боту
+                </a>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
